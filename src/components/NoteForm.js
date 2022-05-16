@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './NoteForm.css';
 
-const NoteForm = () => {
+const NoteForm = (props) => {
 
   const [state, setState] = useState({});
 
@@ -13,7 +13,7 @@ const NoteForm = () => {
   };
 
   const handleSubmit = (event) => {
-    //const URL = 'http://127.0.0.1:3000/api/v1/notes';
+    // const URL = 'http://127.0.0.1:3000/api/v1/notes';
     const URL = 'https://to-do-list-back-ruby-on-rails.herokuapp.com/api/v1/notes';
 
     return(
@@ -24,6 +24,11 @@ const NoteForm = () => {
         },
         body: JSON.stringify({ note: state })
       }).then(response => response.json())
+        .then(data => {
+          props.setNotes(
+            [...props.notes, data]
+          );
+        })
     )
   };
 

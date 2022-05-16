@@ -32,7 +32,7 @@ function App() {
         <h1>To-do List</h1>
       </header>
       <main className="App-main">
-        <NoteForm />
+        <NoteForm notes={notes} setNotes={setNotes} />
         <hr/>
         <Notes notes={notes}/>
       </main>
