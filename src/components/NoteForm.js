@@ -26,7 +26,7 @@ const NoteForm = (props) => {
       }).then(response => response.json())
         .then(data => {
           props.setNotes(
-            [...props.notes, data]
+            [data, ...props.notes]
           );
         })
     )
