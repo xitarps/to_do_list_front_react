@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import Notes from './components/Notes';
 import { useEffect, useState } from 'react';
+
+import Notes from './components/Notes';
+import NoteForm from './components/NoteForm';
 
 function App() {
   // const URL = 'http://127.0.0.1:3000/api/v1/notes';
@@ -30,6 +32,8 @@ function App() {
         <h1>To-do List</h1>
       </header>
       <main className="App-main">
+        <NoteForm />
+        <hr/>
         <Notes notes={notes}/>
       </main>
     </div>
