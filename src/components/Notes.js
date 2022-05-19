@@ -31,7 +31,7 @@ const Notes = (props) => {
               <div key={note.id}>
                 <h3 className="note-title">{note.title} <span className='close-cross' onClick={() => deleteNote(note.id)} >✖</span></h3>
                 <p>{note.description}</p>
-                <p><strong>{note.resolving_date}</strong></p>
+                <p><strong>{new Date(note.resolving_date).toLocaleString("pt-BR", {timeZone: "UTC"})}</strong></p>
               </div>
             )
           })
