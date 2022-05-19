@@ -10,3 +10,8 @@
   /* overflow-y: scroll;
   max-height: 40vh; */
 }
+
+.close-cross{
+  color: rgb(197, 0, 0);
+  cursor: pointer;
+}

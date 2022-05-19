@@ -34,7 +34,7 @@ function App() {
       <main className="App-main">
         <NoteForm notes={notes} setNotes={setNotes} />
         <hr/>
-        <Notes notes={notes}/>
+        <Notes notes={notes} setNotes={setNotes}/>
       </main>
     </div>
   );
