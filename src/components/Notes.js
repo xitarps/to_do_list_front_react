@@ -4,8 +4,8 @@ import './Notes.css';
 const Notes = (props) => {
 
   const deleteNote = (id) => {
-    const URL = 'http://127.0.0.1:3000/api/v1/notes/' + id;
-    // const URL = 'https://to-do-list-back-ruby-on-rails.herokuapp.com/api/v1/notes/' + id;
+    // const URL = 'http://127.0.0.1:3000/api/v1/notes/' + id;
+    const URL = 'https://to-do-list-back-ruby-on-rails.herokuapp.com/api/v1/notes/' + id;
 
     fetch(URL, {
       method: 'DELETE',
